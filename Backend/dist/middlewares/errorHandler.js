@@ -1,0 +1,16 @@
+import { ZodError } from "zod";
+export function errorHandler(err, _req, res, _next) {
+    if (err instanceof ZodError) {
+        return res.status(400).json({
+            ok: false,
+            error: "VALIDATION_ERROR",
+            issues: err.issues,
+        });
+    }
+    if (err instanceof Error) {
+        return res
+            .status(500)
+            .json({ ok: false, error: "INTERNAL_ERROR", message: err.message });
+    }
+    return res.status(500).json({ ok: false, error: "INTERNAL_ERROR" });
+}
