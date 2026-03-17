@@ -224,33 +224,6 @@ a.more:hover {
 	border: none; 
 }
 
-/* search page */
-.search_list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-.search_item {
-	padding: 14px 0;
-	border-bottom: 1px solid #eee;
-}
-.search_title {
-	display: inline-block;
-	font-size: 16px;
-	color: #0e4369;
-	font-weight: normal;
-}
-.search_snippet {
-	margin-top: 6px;
-	color: #666;
-}
-.search_empty {
-	padding: 14px;
-	background: #f7f7f7;
-	border: 1px solid #eee;
-	color: #333;
-}
-
 /* end of menu */
 
 /* slider */
@@ -315,9 +288,9 @@ a.more:hover {
 }
 
 #slider {
-	float: right;
-	width: 320px;
-	height: 240px; 
+	width: 960px;
+	height: 260px;
+	margin: 0 auto;
 	overflow: hidden;
 }
 
